@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Destruction : MonoBehaviour
 {
+	public int scoreValue = -15;
 	public int enemyDamage = 1;
 	GameObject Player;
 	PlayerHealth playerHealth;
@@ -21,6 +22,7 @@ public class Destruction : MonoBehaviour
 		if (other.gameObject == Player)
 		{
 			playerHealth.TakeDamage(enemyDamage);
+			ScoreManager.score += scoreValue;
 			Destroy(gameObject);
 		}
 	}

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 public class EnemyHealth : MonoBehaviour
@@ -22,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
 		if (currentHealth <= 0)
 		{
 			Destroy(gameObject);
+			SceneManager.LoadScene("LevelComplete");
 		}
 	}
 }

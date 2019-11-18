@@ -42,7 +42,7 @@ public class BossMovement : MonoBehaviour
 		}
 		GetComponent<Rigidbody>().velocity = Velocity;
 		{
-			transform.Rotate(new Vector3(0, 300, 0) * Time.deltaTime);
+			transform.Rotate(new Vector3(0, 0, 0) * Time.deltaTime);
 
 		}
     }
